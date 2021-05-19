@@ -1,9 +1,13 @@
 <?php
-var_dump($_GET);
+//var_dump($_GET);
+//echo "<br>";
+//var_dump($_POST);
+//echo "<br>";
+
+
+echo @$_REQUEST['first_name'] . " " . @$_REQUEST['last_name'];
 echo "<br>";
-var_dump($_POST);
-echo "<br>";
-var_dump($_REQUEST);
+echo @$_REQUEST['op']
 ?>
 <!doctype html>
 <html lang="en">
@@ -17,29 +21,33 @@ var_dump($_REQUEST);
 <body>
 <form action="form.php" method="get">
     <input type="hidden" name="id" value="43324234234">
-   <label> First Name: <input type="text" name="first_name"></label><br>
-    <label>Last Name: <input type="text" name="last_name"></label><br>
+    <label> First Name: <input type="text" name="first_name" value="<?php echo @$_REQUEST['first_name'] ?>"></label><br>
+    <label>Last Name: <input type="text" name="last_name" value="<?= @$_REQUEST['last_name'] ?>"></label><br>
 
 
     <label>Password: <input type="password" name="password"></label><br>
 
     Fav1: <input type="checkbox" checked name="fav1" value="1">
     Fav2: <input type="checkbox" checked name="fav2" value="1">
-<br>
+    <br>
     male: <input type="radio" checked name="g" value="m">
     female: <input type="radio" name="g" value="f">
 
     <textarea name="note"></textarea>
 
-<select name="city">
-    <option value="msh">Mashhad</option>
-    <option value="shz">Shiraz</option>
-    <option selected value="teh">Tehran</option>
-</select>
+    <select name="city">
+        <option value="msh">Mashhad</option>
+        <option value="shz">Shiraz</option>
+        <option selected value="teh">Tehran</option>
+    </select>
 
-    <input type="reset" onclick="return confirm('reset the form???!!!')" >
+    <input type="reset" onclick="return confirm('reset the form???!!!')">
     <input type="image" src="">
-    <input type="submit" value="Send">
+    <br>
+    <br>
+
+    <input type="submit" value="+" name="op">
+    <input type="submit" value="-" name="op">
 </form>
 </body>
 </html>
