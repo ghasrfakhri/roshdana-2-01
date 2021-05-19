@@ -5,8 +5,6 @@ echo "<br>";
 var_dump($_POST);
 echo "<br>";
 var_dump($_REQUEST);
-
-
 ?>
 <!doctype html>
 <html lang="en">
@@ -21,7 +19,7 @@ var_dump($_REQUEST);
 <form action="form.php" method="get">
     <input type="hidden" name="id" value="43324234234">
    <label> First Name: <input type="text" name="first_name"></label><br>
-    Last Name: <input type="text" name="last_name"><br>
+    <label>Last Name: <input type="text" name="last_name"></label><br>
 
 
     Password: <input type="password" name="password"><br>
