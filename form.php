@@ -22,7 +22,7 @@ var_dump($_REQUEST);
     <label>Last Name: <input type="text" name="last_name"></label><br>
 
 
-    Password: <input type="password" name="password"><br>
+    <label>Password: <input type="password" name="password"></label><br>
 
     Fav1: <input type="checkbox" checked name="fav1" value="1">
     Fav2: <input type="checkbox" checked name="fav2" value="1">
